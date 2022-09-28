@@ -1,14 +1,22 @@
 <template>
-    <button>
-        <slot></slot>
-    </button>
+  <button @click="onClick" :style="{background:color}" class="btn">
+    {{text}}
+  </button>
 </template>
-<style scoped>
-  button{
-    padding: 5px;
-    background-color: chocolate;
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
+<script>
+export default {
+  name: 'Button',
+  props: {
+    text: String,
+    color: String,
+  },
+  methods:{
+    onClick(){
+      console.log("first")
+    }
   }
-  </style>
+}
+</script>
+<style scoped>
+
+</style>
